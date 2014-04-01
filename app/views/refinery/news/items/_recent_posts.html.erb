@@ -1,0 +1,11 @@
+<nav id="recent_news_items">
+  <!--<h2><%= t('.recent_posts') %></h2>-->
+  <h2> Recent News </h2>
+  <ul>
+    <% @items.each do |item| %>
+      <li>
+        <h3><%= link_to item.title, refinery.news_item_path(item) %> </h3>
+      </li>
+    <% end %>
+  </ul>
+</nav>
