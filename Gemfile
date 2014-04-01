@@ -3,12 +3,13 @@ ruby '2.1.1'
 #ruby-gemset=rails3refinery
 
 gem 'rails', '3.2.17'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 
@@ -54,6 +55,7 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 # Refinery's news engine allows you to post updates to the news section of your website.
 gem 'refinerycms-news', '~> 2.1.0'
 
-group :production do
-  gem 'pg', '~> 0.12.2'
+
+group :test do
+  gem 'capybara', '1.1.2'
 end
