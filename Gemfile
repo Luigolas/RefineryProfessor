@@ -53,3 +53,7 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 
 # Refinery's news engine allows you to post updates to the news section of your website.
 gem 'refinerycms-news', '~> 2.1.0'
+
+group :production do
+  gem 'pg', '~> 0.12.2'
+end
