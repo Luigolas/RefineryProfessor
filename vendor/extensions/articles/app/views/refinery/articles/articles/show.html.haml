@@ -1,0 +1,34 @@
+- content_for :body_content_title do
+  = @article.title
+- content_for :body do
+  %section
+    %h1 Title
+    %p
+      = raw @article.title
+  %section
+    %h1 Authors
+    %p
+      = raw @article.authors
+  %section
+    %h1 Reference
+    %p
+      = raw @article.reference
+  %section
+    %h1 Abstract
+    %p
+      = raw @article.abstract
+  %section
+    %h1 File
+    %p
+      - if @article.file
+        = link_to("Descarga", @article.file.url)
+      - else
+        No hay fichero
+- content_for :side_body do
+  %aside
+    %h2= t('.other')
+    %ul#articles
+      - @articles.each do |article|
+        %li
+          = link_to article.title, refinery.articles_article_path(article)
+= render '/refinery/content_page'
