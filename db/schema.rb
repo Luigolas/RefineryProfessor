@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140409191457) do
+ActiveRecord::Schema.define(:version => 20140409200220) do
 
   create_table "refinery_article_translations", :force => true do |t|
     t.integer  "refinery_article_id"
@@ -181,6 +181,31 @@ ActiveRecord::Schema.define(:version => 20140409191457) do
 
   add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_refinery_roles_users_on_role_id_and_user_id"
   add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_refinery_roles_users_on_user_id_and_role_id"
+
+  create_table "refinery_route_translations", :force => true do |t|
+    t.integer  "refinery_route_id"
+    t.string   "locale",            :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "region"
+    t.text     "description"
+    t.text     "sections"
+  end
+
+  add_index "refinery_route_translations", ["locale"], :name => "index_refinery_route_translations_on_locale"
+  add_index "refinery_route_translations", ["refinery_route_id"], :name => "index_refinery_route_translations_on_refinery_route_id"
+
+  create_table "refinery_routes", :force => true do |t|
+    t.string   "name"
+    t.string   "region"
+    t.string   "duration"
+    t.string   "authors"
+    t.text     "description"
+    t.text     "sections"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"
