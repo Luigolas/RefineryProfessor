@@ -1,0 +1,35 @@
+= form_for [refinery, :books_admin, @book] do |f|
+  = render '/refinery/admin/error_messages',
+    :object => @book,
+    :include_object_name => true
+  = render '/refinery/admin/locale_picker',
+    :current_locale => Globalize.locale
+  .field
+    = f.label :title
+    = f.text_field :title, :class => 'larger widest'
+  .field
+    = f.label :author
+    = f.text_field :author
+  .field
+    = f.label :isbn
+    = f.text_field :isbn
+  .field
+    = render '/refinery/admin/wysiwyg',
+      :f => f,
+      :fields => [:abstract],
+      :object => "books/book"
+  .field
+    = f.label :file_id
+    = render :partial => "/refinery/admin/resource_picker",
+     :locals => { :f => f,
+                  :field => :file_id,
+                  :resource => @book.file }
+  = render '/refinery/admin/form_actions', :f => f,
+    :continue_editing => false,
+    :delete_title => t('delete', :scope => 'refinery.books.admin.books.book'),
+    :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @book.title)
+- content_for :javascripts do
+  :javascript
+    $(document).ready(function(){
+        page_options.init(false, '', '');
+    });

@@ -1,0 +1,31 @@
+cs:
+  refinery:
+    plugins:
+      books:
+        title: Books
+    books:
+      admin:
+        books:
+          actions:
+            create_new: Přidat Book
+            reorder: Řadit Books
+            reorder_done: Konec řazení Books
+          records:
+            title: Books
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Books. Zvolte "Přidat Book" pro přidání prvního book.
+          book:
+            view_live_html: Zobrazit náhled book<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit book
+            delete: Smazat book
+      books:
+        show:
+          other: Další Books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        isbn: Isbn
+        abstract: Abstract
+        file_id: File

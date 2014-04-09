@@ -1,0 +1,31 @@
+it:
+  refinery:
+    plugins:
+      books:
+        title: Books
+    books:
+      admin:
+        books:
+          actions:
+            create_new: Aggiungi Nuovo Book
+            reorder: Riordina Books
+            reorder_done: Termina il Riordino di Books
+          records:
+            title: Books
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Books. Clicca "Aggiungi Nuovo Book" per aggiungere il tuo primo book.
+          book:
+            view_live_html: Guarda live questo book <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo book
+            delete: Rimuovi per sempre questo book
+      books:
+        show:
+          other: Altri Books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        isbn: Isbn
+        abstract: Abstract
+        file_id: File

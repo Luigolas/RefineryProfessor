@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140409170736) do
+ActiveRecord::Schema.define(:version => 20140409191457) do
 
   create_table "refinery_article_translations", :force => true do |t|
     t.integer  "refinery_article_id"
@@ -29,6 +29,29 @@ ActiveRecord::Schema.define(:version => 20140409170736) do
     t.string   "title"
     t.string   "authors"
     t.string   "reference"
+    t.text     "abstract"
+    t.integer  "file_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_book_translations", :force => true do |t|
+    t.integer  "refinery_book_id"
+    t.string   "locale",           :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "title"
+    t.text     "abstract"
+  end
+
+  add_index "refinery_book_translations", ["locale"], :name => "index_refinery_book_translations_on_locale"
+  add_index "refinery_book_translations", ["refinery_book_id"], :name => "index_refinery_book_translations_on_refinery_book_id"
+
+  create_table "refinery_books", :force => true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "isbn"
     t.text     "abstract"
     t.integer  "file_id"
     t.integer  "position"

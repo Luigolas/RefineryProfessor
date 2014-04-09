@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      books:
+        title: Books
+    books:
+      admin:
+        books:
+          actions:
+            create_new: 建立新的 Book
+            reorder: 对 Books 重新排序
+            reorder_done: 对 Books 的重新排序结束
+          records:
+            title: Books
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Books yet. Click "Add New Book" to add your first book.
+            no_items_yet: 目前没有 Books . 点击 "Add New Book" 创建一个book.
+          book:
+            view_live_html: 查看 book 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 book
+            delete: 永久删除 book
+      books:
+        show:
+          other: 其他 Books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        isbn: Isbn
+        abstract: Abstract
+        file_id: File

@@ -21,7 +21,7 @@
     %h1 File
     %p
       - if @article.file
-        = link_to("Descarga", @article.file.url)
+        = link_to("Download", @article.file.url)
       - else
         No hay fichero
 - content_for :side_body do

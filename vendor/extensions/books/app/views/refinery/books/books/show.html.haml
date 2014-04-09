@@ -1,0 +1,34 @@
+- content_for :body_content_title do
+  = @book.title
+- content_for :body do
+  %section
+    %h1 Title
+    %p
+      = raw @book.title
+  %section
+    %h1 Author
+    %p
+      = raw @book.author
+  %section
+    %h1 Isbn
+    %p
+      = raw @book.isbn
+  %section
+    %h1 Abstract
+    %p
+      = raw @book.abstract
+  %section
+    %h1 File
+    %p
+      - if @book.file
+        = link_to("Download", @book.file.url)
+      - else
+        No hay fichero
+- content_for :side_body do
+  %aside
+    %h2= t('.other')
+    %ul#books
+      - @books.each do |book|
+        %li
+          = link_to book.title, refinery.books_book_path(book)
+= render '/refinery/content_page'

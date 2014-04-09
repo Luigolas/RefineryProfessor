@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-articles (1.0)
       refinerycms-core (~> 2.1.2)
+    refinerycms-books (1.0)
+      refinerycms-core (~> 2.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -241,6 +243,7 @@ DEPENDENCIES
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-articles!
+  refinerycms-books!
   refinerycms-news (~> 2.1.0)
   rspec-rails
   sass-rails (~> 3.2.3)

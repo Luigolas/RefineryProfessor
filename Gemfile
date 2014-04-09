@@ -62,3 +62,4 @@ group :test do
   gem 'capybara', '1.1.2'
 end
 gem 'refinerycms-articles', :path => 'vendor/extensions'
+gem 'refinerycms-books', :path => 'vendor/extensions'
