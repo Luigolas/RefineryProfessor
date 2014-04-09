@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140331115018) do
+ActiveRecord::Schema.define(:version => 20140409170736) do
+
+  create_table "refinery_article_translations", :force => true do |t|
+    t.integer  "refinery_article_id"
+    t.string   "locale",              :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "title"
+    t.text     "abstract"
+  end
+
+  add_index "refinery_article_translations", ["locale"], :name => "index_refinery_article_translations_on_locale"
+  add_index "refinery_article_translations", ["refinery_article_id"], :name => "index_refinery_article_translations_on_refinery_article_id"
+
+  create_table "refinery_articles", :force => true do |t|
+    t.string   "title"
+    t.string   "authors"
+    t.string   "reference"
+    t.text     "abstract"
+    t.integer  "file_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
