@@ -8,8 +8,9 @@
   .container#dialog_container
     .col-md-2
       %img.img-responsive.img-thumbnail(src="#{request.protocol}#{request.host_with_port}/system/images/W1siZiIsIjIwMTQvMDQvMDIvMTVfMDRfMDRfNTcwX3Byb2ZpbGVfZGVmYXVsdC5qcGciXSxbInAiLCJ0aHVtYiIsIjIyNXgyNTU%2BIl0sWyJwIiwic3RyaXAiXV0/profile-default.jpg")
-      #sidebar.navbar.sidebar-offcanvas.col-md-2{role: "navigation"}
+      #sidebar.navbar.sidebar-offcanvas{role: "navigation"}
         = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
+        -#= navigation_menu.to_html
     .col-md-10
       %header#header.row
         = render "refinery/header"
