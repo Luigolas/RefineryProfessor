@@ -5,6 +5,7 @@ ruby '2.1.1'
 gem 'rails', '3.2.17'
 gem 'pg'
 gem 'bootstrap-sass'
+gem 'haml'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
