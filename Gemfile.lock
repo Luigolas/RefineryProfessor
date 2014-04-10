@@ -5,6 +5,8 @@ PATH
       refinerycms-core (~> 2.1.2)
     refinerycms-books (1.0)
       refinerycms-core (~> 2.1.2)
+    refinerycms-routes (1.0)
+      refinerycms-core (~> 2.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -245,6 +247,7 @@ DEPENDENCIES
   refinerycms-articles!
   refinerycms-books!
   refinerycms-news (~> 2.1.0)
+  refinerycms-routes!
   rspec-rails
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

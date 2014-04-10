@@ -63,3 +63,4 @@ group :test do
 end
 gem 'refinerycms-articles', :path => 'vendor/extensions'
 gem 'refinerycms-books', :path => 'vendor/extensions'
+gem 'refinerycms-routes', :path => 'vendor/extensions'
