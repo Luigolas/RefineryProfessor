@@ -15,3 +15,12 @@ test:
   timeout: 5000
   username: luigolas
   password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: RefineryTeacherPage_production
+  pool: 5
+  timeout: 5000
+  username: luigolas
+  password:

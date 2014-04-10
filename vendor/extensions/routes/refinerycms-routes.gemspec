@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-routes'
+  s.authors           = ['Luis Gonlzalez']
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Routes extension for Refinery CMS'
   s.date              = '2014-04-09'
