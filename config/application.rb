@@ -10,9 +10,9 @@ require "sprockets/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  # Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
+  Bundler.require(:default, :assets, Rails.env)
 end
 
 module RefineryTeacherPage
@@ -68,6 +68,6 @@ module RefineryTeacherPage
     # For Heroku deployment. This is necessary to make post-deploy asset precompilation happen.
     # Without this, Refinery will fail to compile its assets, owing to its use of Rails’ URL helpers
     # inside of its Javascript files (necessary for its WYSIWYG editor).
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
   end
 end
