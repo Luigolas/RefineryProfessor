@@ -1,0 +1,47 @@
+<%= form_for [refinery, :routes_admin, @route] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @route,
+              :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+              :current_locale => Globalize.locale %>
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :region -%>
+    <%= f.text_field :region -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :duration -%>
+    <%= f.text_field :duration -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :authors -%>
+    <%= f.text_field :authors -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description, :sections],
+                :object => "routes/route" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.routes.admin.routes.route'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @route.name) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

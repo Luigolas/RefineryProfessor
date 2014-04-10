@@ -1,0 +1,32 @@
+it:
+  refinery:
+    plugins:
+      routes:
+        title: Routes
+    routes:
+      admin:
+        routes:
+          actions:
+            create_new: Aggiungi Nuovo Route
+            reorder: Riordina Routes
+            reorder_done: Termina il Riordino di Routes
+          records:
+            title: Routes
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Routes. Clicca "Aggiungi Nuovo Route" per aggiungere il tuo primo route.
+          route:
+            view_live_html: Guarda live questo route <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo route
+            delete: Rimuovi per sempre questo route
+      routes:
+        show:
+          other: Altri Routes
+  activerecord:
+    attributes:
+      'refinery/routes/route':
+        name: Name
+        region: Region
+        duration: Duration
+        authors: Authors
+        description: Description
+        sections: Sections

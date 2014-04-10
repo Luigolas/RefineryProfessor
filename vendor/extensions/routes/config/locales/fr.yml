@@ -1,0 +1,32 @@
+fr:
+  refinery:
+    plugins:
+      routes:
+        title: Routes
+    routes:
+      admin:
+        routes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Route
+            reorder: Réordonner les Routes
+            reorder_done: Fin de réordonnancement des Routes
+          records:
+            title: Routes
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Route. Cliquer sur "Créer un(e) nouve(au/l/lle) Route" pour créer votre premi(er/ère) route.'
+          route:
+            view_live_html: Voir ce(t/tte) route <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) route
+            delete: Supprimer définitivement ce(t/tte) route
+      routes:
+        show:
+          other: Autres Routes
+  activerecord:
+    attributes:
+      'refinery/routes/route':
+        name: Name
+        region: Region
+        duration: Duration
+        authors: Authors
+        description: Description
+        sections: Sections

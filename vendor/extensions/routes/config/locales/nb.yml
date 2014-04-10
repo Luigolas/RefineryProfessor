@@ -1,0 +1,32 @@
+nb:
+  refinery:
+    plugins:
+      routes:
+        title: Routes
+    routes:
+      admin:
+        routes:
+          actions:
+            create_new: Lag en ny Route
+            reorder: Endre rekkefølgen på Routes
+            reorder_done: Ferdig å endre rekkefølgen Routes
+          records:
+            title: Routes
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Routes enda. Klikk på "Lag en ny Route" for å legge til din første route.
+          route:
+            view_live_html: Vis hvordan denne route ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne route
+            delete: Fjern denne route permanent
+      routes:
+        show:
+          other: Andre Routes
+  activerecord:
+    attributes:
+      'refinery/routes/route':
+        name: Name
+        region: Region
+        duration: Duration
+        authors: Authors
+        description: Description
+        sections: Sections

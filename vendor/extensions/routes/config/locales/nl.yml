@@ -1,0 +1,32 @@
+nl:
+  refinery:
+    plugins:
+      routes:
+        title: Routes
+    routes:
+      admin:
+        routes:
+          actions:
+            create_new: Nieuwe Route toevoegen
+            reorder: De volgorde van de Routes wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Route-volgorde
+          records:
+            title: Routes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Routes. Druk op 'Nieuwe Route toevoegen' om de eerste toe te voegen.
+          route:
+            view_live_html: Deze route op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze route
+            delete: Deze route definitief verwijderen
+      routes:
+        show:
+          other: Andere Routes
+  activerecord:
+    attributes:
+      'refinery/routes/route':
+        name: Name
+        region: Region
+        duration: Duration
+        authors: Authors
+        description: Description
+        sections: Sections

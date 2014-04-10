@@ -1,0 +1,33 @@
+es:
+  refinery:
+    plugins:
+      routes:
+        title: Routes
+#        article: masculino/femenino
+    routes:
+      admin:
+        routes:
+          actions:
+            create_new: Crear nuevo route
+            reorder: Reordenar routes
+            reorder_done: Reordenación de routes completada
+          records:
+            title: Routes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay routes todavía. Pulsa en "Crear nuevo Route" para crear tu primer route.
+          route:
+            view_live_html: Ver este route como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este route
+            delete: Borrar este route para siempre
+      routes:
+        show:
+          other: Otros routes
+  activerecord:
+    attributes:
+      'refinery/routes/route':
+        name: Name
+        region: Region
+        duration: Duration
+        authors: Authors
+        description: Description
+        sections: Sections

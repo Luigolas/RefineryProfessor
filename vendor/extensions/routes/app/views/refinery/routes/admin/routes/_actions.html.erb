@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Routes::Admin::RoutesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.routes_admin_routes_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_routes_admin_route_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Routes::Admin::RoutesController.sortable? && ::Refinery::Routes::Route.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Routes"),
+                 refinery.routes_admin_routes_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Routes"),
+                 refinery.routes_admin_routes_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
