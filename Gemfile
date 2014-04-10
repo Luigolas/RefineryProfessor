@@ -56,11 +56,14 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 
 # Refinery's news engine allows you to post updates to the news section of your website.
 gem 'refinerycms-news', '~> 2.1.0'
-
+gem 'refinerycms-articles', :path => 'vendor/extensions'
+gem 'refinerycms-books', :path => 'vendor/extensions'
+gem 'refinerycms-routes', :path => 'vendor/extensions'
 
 group :test do
   gem 'capybara', '1.1.2'
 end
-gem 'refinerycms-articles', :path => 'vendor/extensions'
-gem 'refinerycms-books', :path => 'vendor/extensions'
-gem 'refinerycms-routes', :path => 'vendor/extensions'
+
+group :production do
+  gem 'fog'
+end
