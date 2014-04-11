@@ -25,5 +25,5 @@ en:
     attributes:
       'refinery/customizations/customization':
         name: Name
-        desctiption: Desctiption
+        desctiption: Description
         image_id: Image

@@ -1,0 +1,5 @@
+%h1#logo
+  -#= link_to Refinery::Core.site_name, refinery.root_path
+  = link_to Refinery::Customizations::Customization.first.name, refinery.root_path
+%h2#description
+  = Refinery::Customizations::Customization.first.description

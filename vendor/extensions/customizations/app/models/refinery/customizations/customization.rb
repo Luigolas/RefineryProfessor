@@ -5,6 +5,8 @@ module Refinery
 
       belongs_to :image, :class_name => 'Image'
 
+      alias_attribute :description, :desctiption
+
       attr_accessible :name, :desctiption, :image_id, :position
 
       validates :name, :presence => true, :uniqueness => true

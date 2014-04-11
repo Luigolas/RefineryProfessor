@@ -25,6 +25,6 @@ es:
   activerecord:
     attributes:
       'refinery/customizations/customization':
-        name: Name
-        desctiption: Desctiption
-        image_id: Image
+        name: Nombre
+        desctiption: Descripción
+        image_id: Imagen

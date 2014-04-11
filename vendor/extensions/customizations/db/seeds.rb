@@ -11,7 +11,7 @@ Refinery::I18n.frontend_locales.each do |lang|
   end
 
   Refinery::Customizations::Customization.create(
-      name: 'Name',
+      name: 'Name'
   )
   #url = "/customizations"
   #if defined?(Refinery::Page) && Refinery::Page.where(:link_url => url).empty?

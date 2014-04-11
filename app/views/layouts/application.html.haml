@@ -8,7 +8,8 @@
   .container#dialog_container
     .row
       .col-md-2
-        %img.img-responsive.img-thumbnail(src="#{request.protocol}#{request.host_with_port}/system/images/W1siZiIsIjIwMTQvMDQvMDIvMTVfMDRfMDRfNTcwX3Byb2ZpbGVfZGVmYXVsdC5qcGciXSxbInAiLCJ0aHVtYiIsIjIyNXgyNTU%2BIl0sWyJwIiwic3RyaXAiXV0/profile-default.jpg")
+        -#%img-responsive.img-thumbnail
+        = image_tag Refinery::Customizations::Customization.first.image.url, :class => "img-responsive img-thumbnail"
         #sidebar.navbar.sidebar-offcanvas{role: "navigation"}
           = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
           -#= navigation_menu.to_html
