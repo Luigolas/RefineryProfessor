@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140409200220) do
+ActiveRecord::Schema.define(:version => 20140411174715) do
 
   create_table "refinery_article_translations", :force => true do |t|
     t.integer  "refinery_article_id"
@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(:version => 20140409200220) do
     t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_customizations", :force => true do |t|
+    t.string   "name"
+    t.string   "desctiption"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "refinery_images", :force => true do |t|

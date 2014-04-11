@@ -1,0 +1,29 @@
+it:
+  refinery:
+    plugins:
+      customizations:
+        title: Customizations
+    customizations:
+      admin:
+        customizations:
+          actions:
+            create_new: Aggiungi Nuovo Customization
+            reorder: Riordina Customizations
+            reorder_done: Termina il Riordino di Customizations
+          records:
+            title: Customizations
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Customizations. Clicca "Aggiungi Nuovo Customization" per aggiungere il tuo primo customization.
+          customization:
+            view_live_html: Guarda live questo customization <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo customization
+            delete: Rimuovi per sempre questo customization
+      customizations:
+        show:
+          other: Altri Customizations
+  activerecord:
+    attributes:
+      'refinery/customizations/customization':
+        name: Name
+        desctiption: Desctiption
+        image_id: Image

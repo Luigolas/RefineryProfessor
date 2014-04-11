@@ -70,3 +70,4 @@ group :production do
   gem 'fog'
   gem 'rails_12factor'
 end
+gem 'refinerycms-customizations', :path => 'vendor/extensions'

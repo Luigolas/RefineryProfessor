@@ -20,3 +20,6 @@ Refinery::Books::Engine.load_seed
 
 # Added by Refinery CMS Routes extension
 Refinery::Routes::Engine.load_seed
+
+# Added by Refinery CMS Customizations extension
+Refinery::Customizations::Engine.load_seed

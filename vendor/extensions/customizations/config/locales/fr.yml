@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      customizations:
+        title: Customizations
+    customizations:
+      admin:
+        customizations:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Customization
+            reorder: Réordonner les Customizations
+            reorder_done: Fin de réordonnancement des Customizations
+          records:
+            title: Customizations
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Customization. Cliquer sur "Créer un(e) nouve(au/l/lle) Customization" pour créer votre premi(er/ère) customization.'
+          customization:
+            view_live_html: Voir ce(t/tte) customization <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) customization
+            delete: Supprimer définitivement ce(t/tte) customization
+      customizations:
+        show:
+          other: Autres Customizations
+  activerecord:
+    attributes:
+      'refinery/customizations/customization':
+        name: Name
+        desctiption: Desctiption
+        image_id: Image

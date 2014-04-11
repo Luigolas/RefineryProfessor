@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Customizations::Admin::CustomizationsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.customizations_admin_customizations_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_customizations_admin_customization_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Customizations::Admin::CustomizationsController.sortable? && ::Refinery::Customizations::Customization.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Customizations"),
+                 refinery.customizations_admin_customizations_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Customizations"),
+                 refinery.customizations_admin_customizations_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      customizations:
+        title: Customizations
+#        article: masculino/femenino
+    customizations:
+      admin:
+        customizations:
+          actions:
+            create_new: Crear nuevo customization
+            reorder: Reordenar customizations
+            reorder_done: Reordenación de customizations completada
+          records:
+            title: Customizations
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay customizations todavía. Pulsa en "Crear nuevo Customization" para crear tu primer customization.
+          customization:
+            view_live_html: Ver este customization como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este customization
+            delete: Borrar este customization para siempre
+      customizations:
+        show:
+          other: Otros customizations
+  activerecord:
+    attributes:
+      'refinery/customizations/customization':
+        name: Name
+        desctiption: Desctiption
+        image_id: Image

@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      customizations:
+        title: Customizations
+    customizations:
+      admin:
+        customizations:
+          actions:
+            create_new: 建立新的 Customization
+            reorder: 对 Customizations 重新排序
+            reorder_done: 对 Customizations 的重新排序结束
+          records:
+            title: Customizations
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Customizations yet. Click "Add New Customization" to add your first customization.
+            no_items_yet: 目前没有 Customizations . 点击 "Add New Customization" 创建一个customization.
+          customization:
+            view_live_html: 查看 customization 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 customization
+            delete: 永久删除 customization
+      customizations:
+        show:
+          other: 其他 Customizations
+  activerecord:
+    attributes:
+      'refinery/customizations/customization':
+        name: Name
+        desctiption: Desctiption
+        image_id: Image

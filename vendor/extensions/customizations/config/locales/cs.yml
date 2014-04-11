@@ -1,0 +1,29 @@
+cs:
+  refinery:
+    plugins:
+      customizations:
+        title: Customizations
+    customizations:
+      admin:
+        customizations:
+          actions:
+            create_new: Přidat Customization
+            reorder: Řadit Customizations
+            reorder_done: Konec řazení Customizations
+          records:
+            title: Customizations
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Customizations. Zvolte "Přidat Customization" pro přidání prvního customization.
+          customization:
+            view_live_html: Zobrazit náhled customization<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit customization
+            delete: Smazat customization
+      customizations:
+        show:
+          other: Další Customizations
+  activerecord:
+    attributes:
+      'refinery/customizations/customization':
+        name: Name
+        desctiption: Desctiption
+        image_id: Image

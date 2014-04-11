@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @customization.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @customization.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Desctiption</h1>
+    <p>
+      <%=raw @customization.desctiption %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%=raw @customization.image_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="customizations">
+      <% @customizations.each do |customization| %>
+        <li>
+          <%= link_to customization.name, refinery.customizations_customization_path(customization) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
