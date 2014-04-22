@@ -22,5 +22,11 @@ namespace :db do
         authors: 'Sergio, Armando y Miguel Ángel',
         description: '...'
     )
+
+    Refinery::News::Item.create!(
+        title: 'Primera noticia',
+        body: 'Esta es la primera noticia de prueba',
+        publish_date: Time.now
+    )
   end
 end
