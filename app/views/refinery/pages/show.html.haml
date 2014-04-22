@@ -1,4 +1,7 @@
-.col-md-7
-  = raw @page.content_for(:body)
-.col-md-3
-  =raw @page.content_for(:side_body)
+.row
+  = raw @page.content_for(:introduction)
+.row
+  .col-md-7
+    = raw @page.content_for(:body)
+  .col-md-3
+    =raw @page.content_for(:side_body)
