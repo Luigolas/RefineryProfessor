@@ -13,7 +13,7 @@ Refinery::I18n.frontend_locales.each do |lang|
   url = '/routes'
   if defined?(Refinery::Page) && Refinery::Page.where(:link_url => url).empty?
     page = Refinery::Page.create(
-      :title => 'Routes',
+      :title => 'Hiking',
       :link_url => url,
       :deletable => false,
       :menu_match => "^#{url}(\/|\/.+?|)$"
