@@ -34,13 +34,11 @@ Refinery::Pages::MenuPresenter.class_eval do
   end
 
   def to_html
-    puts "Hello, menu_presenter to_html!"
     render_menu(roots) if roots.present?
   end
 
   private
   def render_menu(items)
-    puts "Hello, menu_presenter render_menu!"
     content_tag(menu_tag, :id => dom_id, :class => css) do
       render_menu_items(items)
     end
