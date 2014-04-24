@@ -61,6 +61,7 @@ gem 'refinerycms-news', '~> 2.1.0'
 gem 'refinerycms-articles', :path => 'vendor/extensions'
 gem 'refinerycms-books', :path => 'vendor/extensions'
 gem 'refinerycms-routes', :path => 'vendor/extensions'
+gem 'refinerycms-customizations', :path => 'vendor/extensions'
 
 group :test do
   gem 'capybara', '1.1.2'
@@ -68,6 +69,8 @@ end
 
 group :production do
   gem 'fog'
+end
+
+group :production, :staging do
   gem 'rails_12factor'
 end
-gem 'refinerycms-customizations', :path => 'vendor/extensions'

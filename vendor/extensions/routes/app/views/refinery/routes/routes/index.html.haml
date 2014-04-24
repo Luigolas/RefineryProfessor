@@ -1,0 +1,14 @@
+- content_for :body do
+  #accordion.panel-group
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseOne"}
+            Este
+          #collapseOne.panel-collapse.collapse
+            .panel-body
+              %ul#routes
+                - @routes.each do |route|
+                  %li
+                    = link_to route.name, refinery.routes_route_path(route)
+= render '/refinery/content_page'
