@@ -4,7 +4,7 @@ module ApplicationHelper
     presenter.css = "navbar-inner"
     presenter.menu_tag = :div
     presenter.list_tag_css = "nav"
-    puts "In application_helper, navigation_menu"
+    puts "Hello, In application_helper, navigation_menu"
     presenter.selected_css = "active"
     presenter.first_css = ""
     presenter.last_css = ""

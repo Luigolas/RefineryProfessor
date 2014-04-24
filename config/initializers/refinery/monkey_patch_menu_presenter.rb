@@ -36,7 +36,7 @@ module Refinery
       end
 
       def to_html
-        puts "Hello, menu_presenter!"
+        puts "Hello, menu_presenter to_html!"
         render_menu(roots) if roots.present?
       end
 
