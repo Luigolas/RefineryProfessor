@@ -2,31 +2,37 @@ es:
   refinery:
     plugins:
       books:
-        title: Books
-#        article: masculino/femenino
+        title: Libros
+        article: masculino
     books:
       admin:
         books:
           actions:
-            create_new: Crear nuevo book
-            reorder: Reordenar books
-            reorder_done: Reordenación de books completada
+            create_new: Crear nuevo libro
+            reorder: Reordenar libros
+            reorder_done: Reordenación de libros completada
           records:
-            title: Books
+            title: Libros
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay books todavía. Pulsa en "Crear nuevo Book" para crear tu primer book.
+            no_items_yet: No hay libros todavía. Pulsa en "Crear nuevo Libro" para crear tu primer libro.
           book:
-            view_live_html: Ver este book como abierto al público <br/><em>(abre en ventana nueva)</em>
-            edit: Editar este book
-            delete: Borrar este book para siempre
+            view_live_html: Ver este libro como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este libro
+            delete: Borrar este libro para siempre
       books:
         show:
-          other: Otros books
+          other: Otros libros
+          title: Título
+          author: Autor
+          isbn: ISBN
+          abstract: Resumen
+          file: Fichero
+          no_file: No hay Fichero
   activerecord:
     attributes:
       'refinery/books/book':
-        title: Title
-        author: Author
-        isbn: Isbn
-        abstract: Abstract
-        file_id: File
+        title: Título
+        author: Autor
+        isbn: ISBN
+        abstract: Resumen
+        file_id: Fichero

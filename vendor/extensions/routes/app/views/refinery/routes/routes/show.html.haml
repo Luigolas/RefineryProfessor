@@ -1,0 +1,35 @@
+- content_for :body_content_title do
+  = @route.name
+- content_for :body do
+  %section
+    %h1= t('.name')
+    %p
+      = raw @route.name
+  %section
+    %h1= t('.region')
+    %p
+      = raw @route.region
+  %section
+    %h1= t('.duration')
+    %p
+      = raw @route.duration
+  %section
+    %h1= t('.authors')
+    %p
+      = raw @route.authors
+  %section
+    %h1= t('.description')
+    %p
+      = raw @route.description
+  %section
+    %h1= t('.sections')
+    %p
+      = raw @route.sections
+- content_for :side_body do
+  %aside
+    %h2= t('.other')
+    %ul#routes
+      - @routes.each do |route|
+        %li
+          = link_to route.name, refinery.routes_route_path(route)
+= render '/refinery/content_page'

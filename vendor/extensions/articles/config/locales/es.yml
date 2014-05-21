@@ -2,31 +2,37 @@ es:
   refinery:
     plugins:
       articles:
-        title: Articles
-#        article: masculino/femenino
+        title: Artículos
+        article: masculino
     articles:
       admin:
         articles:
           actions:
-            create_new: Crear nuevo article
-            reorder: Reordenar articles
-            reorder_done: Reordenación de articles completada
+            create_new: Crear nuevo artículo
+            reorder: Reordenar artículos
+            reorder_done: Reordenación de artículos completada
           records:
-            title: Articles
+            title: Artículos
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay articles todavía. Pulsa en "Crear nuevo Article" para crear tu primer article.
+            no_items_yet: No hay artículos todavía. Pulsa en "Crear nuevo Artículo" para crear tu primer artículo.
           article:
-            view_live_html: Ver este article como abierto al público <br/><em>(abre en ventana nueva)</em>
-            edit: Editar este article
-            delete: Borrar este article para siempre
+            view_live_html: Ver este artículo como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este artículo
+            delete: Borrar este artículo para siempre
       articles:
         show:
-          other: Otros articles
+          other: Otros artículos
+          title: Título
+          authors: Autores
+          reference: Referencia
+          abstract: Resumen
+          file: Fichero
+          no_file: No hay Fichero
   activerecord:
     attributes:
       'refinery/articles/article':
-        title: Title
-        authors: Authors
-        reference: Reference
-        abstract: Abstract
-        file_id: File
+        title: Título
+        authors: Autores
+        reference: Referencia
+        abstract: Resumen
+        file_id: Fichero

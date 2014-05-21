@@ -21,6 +21,12 @@ en:
       routes:
         show:
           other: Other Routes
+          name: Name
+          region: Region
+          duration: Duration
+          authors: Authors
+          description: Description
+          sections: Sections
   activerecord:
     attributes:
       'refinery/routes/route':

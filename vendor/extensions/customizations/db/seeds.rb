@@ -11,10 +11,17 @@ Refinery::I18n.frontend_locales.each do |lang|
   end
 
   Refinery::Customizations::Customization.delete_all
-  Refinery::Customizations::Customization.create(
+  I18n.locale = :en
+  custom = Refinery::Customizations::Customization.create(
       name: 'Name',
       desctiption: 'Description'
   )
+  I18n.locale = :es
+  custom.name = 'Nombre'
+  custom.desctiption = 'Descripción'
+  custom.save
+  I18n.locale = :en
+
   #url = "/customizations"
   #if defined?(Refinery::Page) && Refinery::Page.where(:link_url => url).empty?
   #  page = Refinery::Page.create(

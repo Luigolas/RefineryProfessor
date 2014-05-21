@@ -10,14 +10,18 @@ Refinery::I18n.frontend_locales.each do |lang|
     end
   end
 
-  url = "/books"
+  url = '/books'
   if defined?(Refinery::Page) && Refinery::Page.where(:link_url => url).empty?
+    I18n.locale = :en
     page = Refinery::Page.create(
       :title => 'Books',
       :link_url => url,
       :deletable => false,
       :menu_match => "^#{url}(\/|\/.+?|)$"
     )
+    I18n.locale = :es
+    page.title = 'Libros'
+    page.save
     #Refinery::Pages.default_parts.each_with_index do |default_page_part, index|
     #  page.parts.create(:title => default_page_part, :body => nil, :position => index)
     #end

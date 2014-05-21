@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140411174715) do
+ActiveRecord::Schema.define(:version => 20140521114517) do
 
   create_table "refinery_article_translations", :force => true do |t|
     t.integer  "refinery_article_id"
@@ -58,6 +58,18 @@ ActiveRecord::Schema.define(:version => 20140411174715) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "refinery_customization_translations", :force => true do |t|
+    t.integer  "refinery_customization_id"
+    t.string   "locale",                    :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "name"
+    t.string   "desctiption"
+  end
+
+  add_index "refinery_customization_translations", ["locale"], :name => "index_refinery_customization_translations_on_locale"
+  add_index "refinery_customization_translations", ["refinery_customization_id"], :name => "index_65751054130bfb301946b38cfc67ef6bcd5d8938"
 
   create_table "refinery_customizations", :force => true do |t|
     t.string   "name"

@@ -21,6 +21,12 @@ en:
       articles:
         show:
           other: Other Articles
+          title: Title
+          authors: Authors
+          reference: Reference
+          abstract: Abstract
+          file: File
+          no_file: No file
   activerecord:
     attributes:
       'refinery/articles/article':

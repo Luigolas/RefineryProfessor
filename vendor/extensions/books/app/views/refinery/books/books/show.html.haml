@@ -2,28 +2,28 @@
   = @book.title
 - content_for :body do
   %section
-    %h1 Title
+    %h1= t('.title')
     %p
       = raw @book.title
   %section
-    %h1 Author
+    %h1= t('.author')
     %p
       = raw @book.author
   %section
-    %h1 Isbn
+    %h1= t('.isbn')
     %p
       = raw @book.isbn
   %section
-    %h1 Abstract
+    %h1= t('.abstract')
     %p
       = raw @book.abstract
   %section
-    %h1 File
+    %h1= t('.file')
     %p
       - if @book.file
         = link_to("Download", @book.file.url)
       - else
-        No hay fichero
+        = t('.no_file')
 - content_for :side_body do
   %aside
     %h2= t('.other')

@@ -2,26 +2,26 @@ es:
   refinery:
     plugins:
       customizations:
-        title: Customizations
-#        article: masculino/femenino
+        title: Personalización
+        article: femenina
     customizations:
       admin:
         customizations:
           actions:
-            create_new: Crear nuevo customization
-            reorder: Reordenar customizations
-            reorder_done: Reordenación de customizations completada
+            create_new: Crear nueva personalización
+            reorder: Reordenar personalizaciones
+            reorder_done: Reordenación de personalizaciones completada
           records:
-            title: Customizations
+            title: Personalización
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay customizations todavía. Pulsa en "Crear nuevo Customization" para crear tu primer customization.
+            no_items_yet: No hay personalizaciones todavía. Pulsa en "Crear nueva Personalización" para crear tu primera personalización.
           customization:
-            view_live_html: Ver este customization como abierto al público <br/><em>(abre en ventana nueva)</em>
-            edit: Editar este customization
-            delete: Borrar este customization para siempre
+            view_live_html: Ver esta personalización como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este personalización
+            delete: Borrar esta personalización para siempre
       customizations:
         show:
-          other: Otros customizations
+          other: Otras personalizaciones
   activerecord:
     attributes:
       'refinery/customizations/customization':

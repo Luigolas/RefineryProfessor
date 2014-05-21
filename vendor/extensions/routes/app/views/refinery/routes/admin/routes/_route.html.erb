@@ -5,7 +5,7 @@
     <% if Refinery::I18n.frontend_locales.many? %>
       <span class='preview'>
         <% route.translations.each do |translation| %>
-          <% if translation.name.present? %>
+          <% if translation.region.present? %>
             <%= link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),
                          refinery.edit_routes_admin_route_path(route, :switch_locale => translation.locale),
                          :class => 'locale' %>

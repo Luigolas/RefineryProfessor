@@ -2,7 +2,7 @@ en:
   refinery:
     plugins:
       customizations:
-        title: Customizations
+        title: Customization
     customizations:
       admin:
         customizations:

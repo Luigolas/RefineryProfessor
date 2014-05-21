@@ -21,6 +21,12 @@ en:
       books:
         show:
           other: Other Books
+          title: Title
+          author: Author
+          isbn: Isbn
+          abstract: Abstract
+          file: File
+          no_file: No file
   activerecord:
     attributes:
       'refinery/books/book':

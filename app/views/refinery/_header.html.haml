@@ -1,3 +1,8 @@
+%ul#locale
+  - Refinery::I18n.config.frontend_locales.each do |locale|
+    %li
+      = link_to "/#{locale.to_s + request.path}", {:title => Refinery::I18n.locales[locale]} do
+        %span= Refinery::I18n.locales[locale]
 %h1#logo
   -#= link_to Refinery::Core.site_name, refinery.root_path
   = link_to Refinery::Customizations::Customization.first.name, refinery.root_path

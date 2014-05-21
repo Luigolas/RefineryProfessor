@@ -9,6 +9,12 @@ module Refinery
 
       attr_accessible :name, :desctiption, :image_id, :position
 
+      translates :name, :desctiption
+
+      class Translation
+        attr_accessible :locale
+      end
+
       validates :name, :presence => true, :uniqueness => true
     end
   end
