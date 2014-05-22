@@ -71,6 +71,8 @@ namespace :db do
     home_page.save
 
     news_page = Refinery::Page.find_by_path('news')
+    I18n.locale = :es
+    news_page.title = "Noticias"
     news_page.show_in_menu =false
     news_page.save
 
