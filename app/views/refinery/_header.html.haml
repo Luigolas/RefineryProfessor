@@ -1,6 +1,6 @@
-%ul#locale
+%ul#locale.nav.nav-pills
   - Refinery::I18n.config.frontend_locales.each do |locale|
-    %li
+    %li{:class => ('active' if I18n.locale == locale)}
       = link_to "/#{locale.to_s + request.path}", {:title => Refinery::I18n.locales[locale]} do
         %span= Refinery::I18n.locales[locale]
 %h1#logo
