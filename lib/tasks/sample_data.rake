@@ -38,13 +38,13 @@ namespace :db do
     I18n.locale = :en
     route = Refinery::Routes::Route.create(
         name: 'SARDINA DEL SUR – ANSITE – SARDINA',
-        region: 'Este',
-        duration: '5 horas',
+        region: 'East',
+        duration: '5 h',
         authors: 'Sergio, Armando y Miguel Ángel',
         description: '...'
     )
     I18n.locale = :es
-    route.region = 'East'
+    route.region = 'Este'
     route.description = '...'
     route.save
 
@@ -73,7 +73,7 @@ namespace :db do
     news_page = Refinery::Page.find_by_path('news')
     I18n.locale = :es
     news_page.title = "Noticias"
-    news_page.show_in_menu =false
+    #news_page.show_in_menu =false
     news_page.save
 
     page_404 = Refinery::Page.find_by_path_or_id(2, 2)
