@@ -18,10 +18,7 @@
       :object => "articles/article"
   .field
     = f.label :file_id
-    = render :partial => "/refinery/admin/resource_picker",
-     :locals => { :f => f,
-                  :field => :file_id,
-                  :resource => @article.file }
+    = f.text_field :file_id
   = render '/refinery/admin/form_actions', :f => f,
     :continue_editing => false,
     :delete_title => t('delete', :scope => 'refinery.articles.admin.articles.article'),

@@ -3,8 +3,6 @@ module Refinery
     class Article < Refinery::Core::BaseModel
       self.table_name = 'refinery_articles'
 
-      belongs_to :file, :class_name=>'Resource'
-
       attr_accessible :title, :authors, :reference, :abstract, :file_id, :position
 
       translates :title, :abstract

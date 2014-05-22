@@ -20,8 +20,8 @@
   %section
     %h1= t('.file')
     %p
-      - if @article.file
-        = link_to("Download", @article.file.url)
+      - if not @article.file_id.blank?
+        = link_to t('.download'), @article.file_id, :target => '_blank'
       - else
         = t('.no_file')
 - content_for :side_body do

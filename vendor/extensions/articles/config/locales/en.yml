@@ -27,6 +27,7 @@ en:
           abstract: Abstract
           file: File
           no_file: No file
+          download: Download
   activerecord:
     attributes:
       'refinery/articles/article':

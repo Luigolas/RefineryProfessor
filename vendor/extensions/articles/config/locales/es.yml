@@ -28,6 +28,7 @@ es:
           abstract: Resumen
           file: Fichero
           no_file: No hay Fichero
+          download: Descarga
   activerecord:
     attributes:
       'refinery/articles/article':
