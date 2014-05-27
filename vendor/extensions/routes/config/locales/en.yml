@@ -2,7 +2,7 @@ en:
   refinery:
     plugins:
       routes:
-        title: Routes
+        title: Hiking
     routes:
       admin:
         routes:

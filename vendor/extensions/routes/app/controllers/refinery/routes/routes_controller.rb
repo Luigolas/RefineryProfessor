@@ -9,6 +9,8 @@ module Refinery
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @route in the line below:
         present(@page)
+        @route_regions = @routes.group_by {|route| route.region}
+        # @regions = Route.pluck(:region).uniq
       end
 
       def show
