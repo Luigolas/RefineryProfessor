@@ -38,13 +38,13 @@ namespace :db do
     I18n.locale = :en
     route = Refinery::Routes::Route.create(
         name: 'SARDINA DEL SUR – ANSITE – SARDINA',
-        region: 'East',
+        region: 'EAST',
         duration: '5 h',
         authors: 'Sergio, Armando y Miguel Ángel',
         description: '...'
     )
     I18n.locale = :es
-    route.region = 'Este'
+    route.region = 'ESTE'
     route.description = '...'
     route.save
 
