@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.2'
 #ruby-gemset=rails3refinery
 
 gem 'rails', '3.2.17'
