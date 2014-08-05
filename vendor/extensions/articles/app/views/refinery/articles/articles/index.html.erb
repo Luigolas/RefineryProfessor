@@ -1,7 +1,7 @@
 <% content_for :body do %>
-  <ul id="articles">
+  <ul class="list-group" id="articles">
     <% @articles.each do |article| %>
-      <li>
+      <li class="list-group-item">
         <%= link_to article.title, refinery.articles_article_path(article) %>
       </li>
     <% end %>

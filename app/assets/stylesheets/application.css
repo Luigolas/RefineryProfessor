@@ -11,5 +11,8 @@
  *= require refinery/formatting
  *= require refinery/theme
  *= require_self
- *= require_tree .
+ *= require lavish-bootstrap
+ *= require bootstrap_and_overrides
+ *= require custom
+ * require_tree .
  */

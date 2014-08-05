@@ -1,7 +1,8 @@
+=if not @page.content_for(:introduction).blank?
+  .row
+    = raw @page.content_for(:introduction)
 .row
-  = raw @page.content_for(:introduction)
-.row
-  .col-md-7
+  .col-md-8
     = raw @page.content_for(:body)
-  .col-md-3
+  .col-md-4
     =raw @page.content_for(:side_body)

@@ -93,3 +93,7 @@ capybara-*html
 
 # vendor/extensions dummy applications.
 vendor/extensions/**/spec/dummy
+
+#rsa
+rsa_heroku
+rsa_heroku.*
