@@ -49,7 +49,7 @@ module RefineryTeacherPage
     config.active_support.escape_html_entities_in_json = true
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
-    # This is necessary if your schema can't be completely dumped by the schema dumper,
+    # This is necessary if your schema can't be completely dumped bxpy the schema dumper,
     # like if you have constraints or database-specific column types
     # config.active_record.schema_format = :sql
 
@@ -65,13 +65,13 @@ module RefineryTeacherPage
     #Enable fonts folder at assets
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
-    # Version of your assets, change this if you want to expire all your assets
+    # Version of your assets, change this if you want to eire all your assets
     config.assets.version = '1.0'
 
     # For Heroku deployment. This is necessary to make post-deploy asset precompilation happen.
     # Without this, Refinery will fail to compile its assets, owing to its use of Rails’ URL helpers
     # inside of its Javascript files (necessary for its WYSIWYG editor).
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
   end
 end
 
