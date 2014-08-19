@@ -12,6 +12,6 @@
  *= require custom_bootstrap/custom_bootstrap
  *= require refinery/formatting
  *= require refinery/theme
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
