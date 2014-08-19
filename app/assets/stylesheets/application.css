@@ -8,11 +8,11 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require twitter/bootstrap
+ *= require custom_bootstrap/custom_bootstrap
  *= require refinery/formatting
  *= require refinery/theme
  *= require_self
- *= require lavish-bootstrap
- *= require bootstrap_and_overrides
- *= require custom
- * require_tree .
  */
+
+/**= require_tree .*/

@@ -7,27 +7,23 @@
   = site_bar
   .container#dialog_container
     .row
-      .col-md-4.col-md-offset-7
+      .col-md-4.col-md-offset-8
         %ul#locale.nav.nav-pills
-          - Refinery::I18n.config.frontend_locales.each do |locale|
-            %li{:class => ('active' if I18n.locale == locale)}
-              = link_to "/#{locale.to_s + request.path}", {:title => Refinery::I18n.locales[locale]} do
-                %span= Refinery::I18n.locales[locale]
+          = render 'refinery/locale'
+    %header#header.row
+      = render "refinery/header"
     .row
-      .col-md-2
-        - if Refinery::Customizations::Customization.first.image
-          = image_tag Refinery::Customizations::Customization.first.image.url, :class => 'img-responsive img-thumbnail img-rounded'
-      .col-md-9
-        %header#header.row
-          = render "refinery/header"
-    .row
-      .col-md-2
-        =# Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
-        #sidebar.navbar.sidebar-offcanvas{role: "navigation"}
-          = navigation_menu.to_html
-      .col-md-9#main_page
+      .col-md-2#navbar_container
+        .navbar
+          - if Refinery::Customizations::Customization.first.image
+            = image_tag Refinery::Customizations::Customization.first.image.url, :class => 'img-responsive img-rounded img-thumbnail'
+          =# Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
+          #sidebar.sidebar-offcanvas{role: "navigation"}
+            = navigation_menu.to_html
+      .col-md-10#main_page
         %section#page
           = yield
     %footer.row
+      -#.col-md-4.col-md-offset-8
       = render "refinery/footer"
   = render "/refinery/javascripts"

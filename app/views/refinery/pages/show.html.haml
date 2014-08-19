@@ -2,7 +2,7 @@
   .row
     = raw @page.content_for(:introduction)
 .row
-  .col-md-8
+  %section.col-md-8#body
     = raw @page.content_for(:body)
-  .col-md-4
+  %section.col-md-4#side_body
     =raw @page.content_for(:side_body)

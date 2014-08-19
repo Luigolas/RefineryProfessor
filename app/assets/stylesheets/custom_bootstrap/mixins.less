@@ -1,0 +1,312 @@
+// Use this file to override Twitter Bootstrap mixins or define own mixins.
+@import "variables";
+
+//
+// Fonts
+// --------------------------------------------------
+@font-face {
+  font-family: 'Museo_Slab_500';
+  src:font-url('Museo_Slab/Museo_Slab_500_2-webfont.eot');
+  src: font-url('Museo_Slab/Museo_Slab_500_2-webfont.eot?iefix') format('eot'),
+  font-url('Museo_Slab/Museo_Slab_500_2-webfont.woff') format('woff'),
+  font-url('Museo_Slab/Museo_Slab_500_2-webfont.ttf') format('truetype'),
+  font-url('Museo_Slab/Museo_Slab_500_2-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amaranth-Italic';
+  src:font-url('Amaranth/amaranth-italic-webfont.eot');
+  src: font-url('Amaranth/amaranth-italic-webfont.eot?iefix') format('eot'),
+      font-url('Amaranth/amaranth-italic-webfont.woff') format('woff'),
+      font-url('Amaranth/amaranth-italic-webfont.ttf') format('truetype'),
+      font-url('Amaranth/amaranth-italic-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fertigo';
+  src:font-url('Fertigo_Pro/Fertigo_PRO-webfont.eot');
+  src: font-url('Fertigo_Pro/Fertigo_PRO-webfont.eot?iefix') format('eot'),
+      font-url('Fertigo_Pro/Fertigo_PRO-webfont.woff') format('woff'),
+      font-url('Fertigo_Pro/Fertigo_PRO-webfont.ttf') format('truetype'),
+      font-url('Fertigo_Pro/Fertigo_PRO-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mueso_sans_500';
+  src:font-url('Museo_sans/MuseoSans_500-webfont.eot');
+  src: font-url('Museo_sans/MuseoSans_500-webfont.eot?iefix') format('eot'),
+  font-url('Museo_sans/MuseoSans_500-webfont.woff') format('woff'),
+  font-url('Museo_sans/MuseoSans_500-webfont.ttf') format('truetype'),
+  font-url('Museo_sans/MuseoSans_500-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src:font-url('notosans_regular/NotoSans-Regular-webfont.eot');
+  src: font-url('notosans_regular/NotoSans-Regular-webfont.eot?iefix') format('eot'),
+  font-url('notosans_regular/NotoSans-Regular-webfont.woff') format('woff'),
+  font-url('notosans_regular/NotoSans-Regular-webfont.ttf') format('truetype'),
+  font-url('notosans_regular/NotoSans-Regular-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merge_light';
+  src: font-url('merge_light/merge_light-webfont.eot');
+  src: font-url('merge_light/merge_light-webfont.eot?iefix') format('eot'),
+  font-url('merge_light/merge_light-webfont.woff') format('woff'),
+  font-url('merge_light/merge_light-webfont.ttf') format('truetype'),
+  font-url('merge_light/merge_light-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardo';
+  src: font-url('cardo/cardob101-webfont.eot');
+  src: font-url('cardo/cardob101-webfont.eot?iefix') format('eot'),
+  font-url('cardo/cardob101-webfont.woff') format('woff'),
+  font-url('cardo/cardob101-webfont.ttf') format('truetype'),
+  font-url('cardo/cardob101-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: font-url('montserrat/Montserrat-Bold-webfont.eot');
+  src: font-url('montserrat/Montserrat-Bold-webfont.eot?iefix') format('eot'),
+  font-url('montserrat/Montserrat-Bold-webfont.woff') format('woff'),
+  font-url('montserrat/Montserrat-Bold-webfont.ttf') format('truetype'),
+  font-url('montserrat/Montserrat-Bold-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helsinki';
+  src: font-url('Helsinki/helsinki-webfont.eot');
+  src: font-url('Helsinki/helsinki-webfont.eot?iefix') format('eot'),
+  font-url('Helsinki/helsinki-webfont.woff') format('woff'),
+  font-url('Helsinki/helsinki-webfont.ttf') format('truetype'),
+  font-url('Helsinki/helsinki-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: font-url('Bebas/BEBAS___-webfont.eot');
+  src: font-url('Bebas/BEBAS___-webfont.eot?iefix') format('eot'),
+  font-url('Bebas/BEBAS___-webfont.woff') format('woff'),
+  font-url('Bebas/BEBAS___-webfont.ttf') format('truetype'),
+  font-url('Bebas/BEBAS___-webfont.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//@font-family-sans-serif: 'Mueso_sans_500', Helvetica, Arial, sans-serif;
+//@font-family-sans-serif: 'Merge_light', Helvetica, Arial, sans-serif;
+@font-family-sans-serif: 'NotoSans', Helvetica, Arial, sans-serif;
+
+html body {
+  background:image-url('Elegant_Background-3.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Mixin */
+.quick-gradient (@origin: left, @alpha: 0.2) {
+  background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+  background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+  background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+  background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+  background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+}
+
+#page_header{
+  background-color: fade(@gray-darker, 80%);
+//  background-color: fade(@gray, 60%);
+//  background-color: BADA55;
+//  .quick-gradient(top, 0.4);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px 60px;
+
+}
+
+section{
+  h1{
+    font-size: 20px;
+    font-family: 'Museo_Slab_500';
+  }
+}
+
+h1,h2{
+//  font-size: 20px;
+  font-family: 'Museo_Slab_500';
+}
+
+#body_content_title{
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+#locale{
+  float: right;
+}
+
+#main_page{
+//  background: rgba(0, 0, 0, 0.60);
+  background: fade(@gray-darker, 50%);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  min-height: 450px;
+}
+
+footer{
+  float: right;
+}
+
+#navbar_container{
+  padding-left: 0px;
+}
+
+#logo{
+  font-size: 46px;
+  font-family: Cardo;
+  a{
+//    color: #5d5d5d;
+//    color: @gray-dark;
+//    color: @gray-light;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+
+#description{
+//  color: #1c685e
+//  color: @gray;
+  color: @gray-lighter;
+  font-family: 'Fertigo';
+}
+
+ul.nav{
+  li{
+    background: fade(@gray-light, 30%);
+//  rgba(100, 100, 100, 0.50);
+//    font-family: Bebas;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+
+section#body{
+  background: rgba(0, 0, 0, 0.30);
+  border-radius: 5px;
+  padding: 5px;
+  min-height: 10px;
+}
+
+article{
+  h2{
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  p{
+    margin-bottom: 2px;
+  }
+//  margin-bottom: 20px;
+}
+
+.date-published{
+  font-family: 'Amaranth-Italic';
+  margin-bottom: 10px;
+}
+
+#back_news{
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.inner{
+  section{
+    h1{
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.50);
+  //  margin-right: 5px;
+  //  margin-left: 0px;
+  padding: 5px;
+}
+
+#sidebar{
+  margin-top: 20px;
+}
+
+li.list-group-item {
+//  background: rgba(100, 100, 100, 0.51);
+  background: fade(@gray-light, 20%);
+  border: 1px solid #DDD;
+}
+
+.panel.panel-default{
+  background: fade(@gray-light, 20%);
+}
+
+.panel-heading{
+  background-color: @gray-dark;
+}
+
+h1, h2, h3.body_content_title {
+  margin-top: 5px;
+}
+
+#page{
+  padding: 10px 5px;
+}
+
+.list-group{
+  margin-bottom: 0px;
+}
+
+footer{
+  color: black;
+}
+
+#recent_news_items{
+  h3{
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+
+//.nav > li > a,
+//{
+//  text-decoration: none;
+//  background-color: #7A8385;
+//  color: white;
+//}
