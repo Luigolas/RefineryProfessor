@@ -147,6 +147,10 @@ html body {
 
 }
 
+h1,h2,h3{
+  color: @link-color;
+}
+
 section{
   h1{
     font-size: 20px;
@@ -168,7 +172,15 @@ h2 {
 }
 
 #locale{
+  margin-top: 12px;
   float: right;
+  li{
+    a{
+      padding: 3px;
+      background: none;
+    }
+    background: none;
+  }
 }
 
 #main_page{
@@ -212,7 +224,7 @@ ul.nav{
   li{
     background: fade(@gray-light, 30%);
 //  rgba(100, 100, 100, 0.50);
-//    font-family: Bebas;
+    font-family: Fertigo;
     text-transform: uppercase;
     border-radius: 5px;
     text-align: center;
@@ -234,12 +246,12 @@ article{
   p{
     margin-bottom: 2px;
   }
-//  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .date-published{
   font-family: 'Amaranth-Italic';
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 #back_news{
@@ -251,6 +263,7 @@ article{
   section{
     h1{
       margin-bottom: 0px;
+      color: @gray-lighter;
     }
   }
 }
@@ -302,6 +315,10 @@ footer{
     margin-bottom: 5px;
     margin-top: 5px;
   }
+}
+
+#accordian{
+  margin-bottom: 5px;
 }
 
 //.nav > li > a,

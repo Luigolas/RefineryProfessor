@@ -1,4 +1,11 @@
-- Refinery::I18n.config.frontend_locales.each do |locale|
-  %li{:class => ('active' if I18n.locale == locale)}
-    = link_to "/#{locale.to_s + request.path}", {:title => Refinery::I18n.locales[locale]} do
-      %span= Refinery::I18n.locales[locale]
+-#- Refinery::I18n.config.frontend_locales.each do |locale|
+-#  %li{:class => ('active' if I18n.locale == locale)}
+-#    = link_to "/#{locale.to_s + request.path}", {:title => Refinery::I18n.locales[locale]} do
+-#      %span= Refinery::I18n.locales[locale]
+%ul#locale.nav.nav-pills
+  %li{:class => ('active' if I18n.locale == :es)}
+    = link_to "/#{:es.to_s + request.path}", {:title => "Español"} do
+      %span= image_tag "spain_round_icon_64.png", :class => "img-rounded img-responsive", :size => "36x36"
+  %li{:class => ('active' if I18n.locale == :en)}
+    = link_to "/#{:en.to_s + request.path}", {:title => "English"} do
+      %span= image_tag "united_kingdom_round_icon_64.png", :size => "36x36"

@@ -27,7 +27,7 @@ es:
           isbn: ISBN
           abstract: Resumen
           file: Fichero
-          no_file: No hay Fichero
+          no_file: No hay fichero disponible
   activerecord:
     attributes:
       'refinery/books/book':
