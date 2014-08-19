@@ -301,5 +301,7 @@ DEPENDENCIES
   refinerycms-news (~> 2.1.0)
   refinerycms-routes!
   rspec-rails
+  sass (= 3.2.13)
+  sass-rails (~> 3.2.3)
   therubyracer
   uglifier (>= 1.0.3)
