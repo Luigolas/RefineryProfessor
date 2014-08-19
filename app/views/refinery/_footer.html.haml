@@ -1,6 +1,10 @@
-%p
-  = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)
+-#%p
+-#  = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)
+%p.author_footer
+  = t('made')
+  %a{ :href => "http://www.luigolas.com"}
+    Luigolas.
 %p.flags_footer
-  Flags icons from
+  = t('flags')
   %a{ :href => "http://www.flags.redpixart.com"}
     flags.redpixart.com
