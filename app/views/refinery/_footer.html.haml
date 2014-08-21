@@ -1,14 +1,14 @@
--#%p
--#  = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)
+%p
+  = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)
 %p.author_footer
   = t('made')
-  %a{ :href => "http://www.luigolas.com"}
+  %a{ :href => 'http://www.luigolas.com'}
     Luigolas
 %p.flags_footer
   = t('flags')
-  %a{ :href => "http://www.flags.redpixart.com"}
+  %a{ :target => '_blank', :href => 'http://www.flags.redpixart.com'}
     flags.redpixart.com
 %p.flags_footer
   =t('background')
-  %a{ :href => "http://www.elegantthemes.com/blog/freebie-of-the-week/20-free-background-images-for-wordpress"}
+  %a{ :target => '_blank', :href => 'http://www.elegantthemes.com/blog/freebie-of-the-week/20-free-background-images-for-wordpress'}
     elegantthemes.com

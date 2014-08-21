@@ -8,7 +8,7 @@
         <p class="date-published">
           <small><%= t('.published') %> <%= l(item.publish_date, :format => :long) %></small>
         </p>
-        <%= truncate  item.body, :length => 200,
+        <%= truncate  item.body, :length => 350,
                       :omission => " ... <br> #{link_to t('.read_more'), refinery.news_item_path(item)}",
                       :preserve_html_tags => true %>
       </article>

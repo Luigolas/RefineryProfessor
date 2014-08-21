@@ -38,34 +38,12 @@
 }
 
 @font-face {
-  font-family: 'Mueso_sans_500';
-  src:font-url('Museo_sans/MuseoSans_500-webfont.eot');
-  src: font-url('Museo_sans/MuseoSans_500-webfont.eot?iefix') format('eot'),
-  font-url('Museo_sans/MuseoSans_500-webfont.woff') format('woff'),
-  font-url('Museo_sans/MuseoSans_500-webfont.ttf') format('truetype'),
-  font-url('Museo_sans/MuseoSans_500-webfont.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'NotoSans';
   src:font-url('notosans_regular/NotoSans-Regular-webfont.eot');
   src: font-url('notosans_regular/NotoSans-Regular-webfont.eot?iefix') format('eot'),
   font-url('notosans_regular/NotoSans-Regular-webfont.woff') format('woff'),
   font-url('notosans_regular/NotoSans-Regular-webfont.ttf') format('truetype'),
   font-url('notosans_regular/NotoSans-Regular-webfont.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Merge_light';
-  src: font-url('merge_light/merge_light-webfont.eot');
-  src: font-url('merge_light/merge_light-webfont.eot?iefix') format('eot'),
-  font-url('merge_light/merge_light-webfont.woff') format('woff'),
-  font-url('merge_light/merge_light-webfont.ttf') format('truetype'),
-  font-url('merge_light/merge_light-webfont.svg#webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -81,41 +59,7 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: font-url('montserrat/Montserrat-Bold-webfont.eot');
-  src: font-url('montserrat/Montserrat-Bold-webfont.eot?iefix') format('eot'),
-  font-url('montserrat/Montserrat-Bold-webfont.woff') format('woff'),
-  font-url('montserrat/Montserrat-Bold-webfont.ttf') format('truetype'),
-  font-url('montserrat/Montserrat-Bold-webfont.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Helsinki';
-  src: font-url('Helsinki/helsinki-webfont.eot');
-  src: font-url('Helsinki/helsinki-webfont.eot?iefix') format('eot'),
-  font-url('Helsinki/helsinki-webfont.woff') format('woff'),
-  font-url('Helsinki/helsinki-webfont.ttf') format('truetype'),
-  font-url('Helsinki/helsinki-webfont.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Bebas';
-  src: font-url('Bebas/BEBAS___-webfont.eot');
-  src: font-url('Bebas/BEBAS___-webfont.eot?iefix') format('eot'),
-  font-url('Bebas/BEBAS___-webfont.woff') format('woff'),
-  font-url('Bebas/BEBAS___-webfont.ttf') format('truetype'),
-  font-url('Bebas/BEBAS___-webfont.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-//@font-family-sans-serif: 'Mueso_sans_500', Helvetica, Arial, sans-serif;
-//@font-family-sans-serif: 'Merge_light', Helvetica, Arial, sans-serif;
 @font-family-sans-serif: 'NotoSans', Helvetica, Arial, sans-serif;
 
 html body {
@@ -127,21 +71,18 @@ html body {
 }
 
 /* Mixin */
-.quick-gradient (@origin: left, @alpha: 0.2) {
-  background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-  background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-  background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-  background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
-  background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+.quick-gradient (@origin: left, @alphaOR: 0.0, @alpha: 0.2) {
+  background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,@alphaOR), rgba(0,0,0,@alpha));
+  background-image: -moz-linear-gradient(@origin, rgba(0,0,0,@alphaOR), rgba(0,0,0,@alpha));
+  background-image: -o-linear-gradient(@origin, rgba(0,0,0,@alphaOR), rgba(0,0,0,@alpha));
+  background-image: -ms-linear-gradient(@origin, rgba(0,0,0,@alphaOR), rgba(0,0,0,@alpha));
+  background-image: linear-gradient(@origin, rgba(0,0,0,@alphaOR), rgba(0,0,0,@alpha));
 }
 
 #page_header{
-  background-color: fade(@gray-darker, 80%);
-//  background-color: fade(@gray, 60%);
-//  background-color: BADA55;
-//  .quick-gradient(top, 0.4);
-  border-radius: 6px;
-  margin-bottom: 10px;
+  .quick-gradient(bottom, 0.4, 0.9);
+  border-radius: 4px;
+  margin-bottom: 8px;
   margin-top: 10px;
   padding: 10px 60px;
 
@@ -159,7 +100,6 @@ section{
 }
 
 h1,h2{
-//  font-size: 20px;
   font-family: 'Museo_Slab_500';
 }
 
@@ -192,7 +132,6 @@ h2 {
 }
 
 footer{
-//  color: black;
   float: right;
   text-align: right;
   margin-bottom: 10px;
@@ -223,6 +162,9 @@ footer{
 //    color: #5d5d5d;
 //    color: @gray-dark;
 //    color: @gray-light;
+//    color: @brand-primary
+//    color:  desaturate(lighten(@text-color, 5%),0%)
+    color:  @text-color
   }
   a:hover {
     text-decoration: none;
@@ -233,7 +175,7 @@ footer{
 #description{
 //  color: #1c685e
 //  color: @gray;
-  color: @gray-lighter;
+  color: lighten(@gray-light, 20%);
   font-family: 'Fertigo';
 }
 
@@ -334,10 +276,3 @@ h1, h2, h3.body_content_title {
 #accordian{
   margin-bottom: 5px;
 }
-
-//.nav > li > a,
-//{
-//  text-decoration: none;
-//  background-color: #7A8385;
-//  color: white;
-//}
