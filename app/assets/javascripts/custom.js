@@ -7,3 +7,4 @@ function checkWidth() {
 }
 
 $(window).resize(checkWidth);
+window.onload = checkWidth
