@@ -8,7 +8,7 @@
   .container#dialog_container
     %header#header.row
       = render "refinery/header"
-    .row.row-eq-height.main_row
+    .row.row-eq-height#main_row
       .col-md-2#navbar_container
         .navbar
           - if Refinery::Customizations::Customization.first.image
