@@ -63,7 +63,7 @@
 @font-family-sans-serif: 'NotoSans', Helvetica, Arial, sans-serif;
 
 html body {
-  background:image-url('Elegant_Background-3.jpg') no-repeat center center fixed;
+  background:image-url('Elegant_Background-2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -127,32 +127,40 @@ h2 {
 //  background: rgba(0, 0, 0, 0.60);
   background: fade(@gray-darker, 50%);
   border-radius: 5px;
-  margin-bottom: 10px;
-  min-height: 458px;
+//  margin-bottom: 10px;
 }
 
 footer{
+  color: @gray;
   float: right;
   text-align: right;
   margin-bottom: 10px;
-  .author_footer{
+  p{
     margin: 0px;
+  }
+  a{
+    color: #664750;
+    &:hover {
+      color:#7D5451;
+      text-decoration: none;
+    }
+  }
+  .author_footer{
+//    margin: 0px;
     font-size: 110%;
     a{
       font-family: Amaranth-Italic;
     }
   }
-  .flags_footer{
+  .credit_footer{
     font-size: 80%;
-    margin: 0px;
-    a{
-      text-decoration: none;
-    }
+//    margin: 0px;
   }
 }
 
 #navbar_container{
   padding-left: 0px;
+//  display: table-cell;
 }
 
 #logo{
@@ -193,7 +201,7 @@ ul.nav{
 section#body{
   background: rgba(0, 0, 0, 0.30);
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   min-height: 10px;
 }
 
@@ -232,6 +240,7 @@ article{
   //  margin-right: 5px;
   //  margin-left: 0px;
   padding: 5px;
+  margin-bottom: 0px;
 }
 
 #sidebar{
@@ -275,4 +284,15 @@ h1, h2, h3.body_content_title {
 
 #accordian{
   margin-bottom: 5px;
+}
+
+.main_row{
+  margin-bottom: 15px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
 }

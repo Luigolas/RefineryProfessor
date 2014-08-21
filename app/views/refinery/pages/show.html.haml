@@ -1,8 +1,12 @@
-=if not @page.content_for(:introduction).blank?
+-if not @page.content_for(:introduction).blank?
   .row
     = raw @page.content_for(:introduction)
 .row
-  %section.col-md-8#body
-    = raw @page.content_for(:body)
-  %section.col-md-4#side_body
-    =raw @page.content_for(:side_body)
+  -if not @page.content_for(:side_body).blank?
+    %section.col-md-8#body
+      = raw @page.content_for(:body)
+    %section.col-md-4#side_body
+      =raw @page.content_for(:side_body)
+  -else
+    %section.col-md-12#body
+      = raw @page.content_for(:body)
