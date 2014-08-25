@@ -71,7 +71,7 @@ module RefineryTeacherPage
     # For Heroku deployment. This is necessary to make post-deploy asset precompilation happen.
     # Without this, Refinery will fail to compile its assets, owing to its use of Rails’ URL helpers
     # inside of its Javascript files (necessary for its WYSIWYG editor).
-    config.assets.initialize_on_precompile = true
+    config.assets.initialize_on_precompile = false
   end
 end
 
