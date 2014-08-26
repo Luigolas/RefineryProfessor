@@ -8,10 +8,10 @@
     = f.text_field :title, :class => 'larger widest'
   .field
     = f.label :authors
-    = f.text_field :authors
+    = f.text_field :authors, :class => 'widest'
   .field
     = f.label :reference
-    = f.text_field :reference
+    = f.text_field :reference, :class => 'widest'
   .field
     = render '/refinery/admin/wysiwyg',
       :f => f, :fields => [:abstract],
