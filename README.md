@@ -41,7 +41,7 @@ to install all dependencies. Run it with:
     
 Sample WebPage
 ==============
-You can view it in action at [sfalon.es](www.sfalcon.es)
+You can view it in action at [sfalcon.es](http://www.sfalcon.es)
 
 Author
 ------
